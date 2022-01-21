@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Books Integration</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/pedido.js"></script>
+    </head>
+    <body>
+
+        <!-- cabeçalho -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="PaginaInicial.html">Books Integration</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="galeria.html">Loja</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Livros
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#memorias-postumas-de-bras-cubas">Memórias Póstumas Brás Cubas</a>
+                                    <a class="dropdown-item" href="#dom-casmurro">Dom Casmurro</a>
+                                    <a class="dropdown-item" href="#dracula">Drácula</a>
+                                    <a class="dropdown-item" href="#o-conde-de-monte-cristo">O Conde de Monte Cristo</a>
+                                    <a class="dropdown-item" href="#os-miseraveis">Os Miseráveis</a>
+                                    <a class="dropdown-item" href="#a-metamorfose">A Metamorfose</a>
+                                    <a class="dropdown-item" href="#1984">1984</a>
+                                    <a class="dropdown-item" href="#frankenstein">Frankenstein</a>
+                                    <a class="dropdown-item" href="#a-revolucao-dos-bichos">A Revolução dos Bichos</a>
+                                    <a class="dropdown-item" href="#a-sociedade-do-anel">A Sociedade do Anel</a>
+                                    <a class="dropdown-item" href="#as-duas-torres">As Duas Torres</a>
+                                    <a class="dropdown-item" href="#o-retorno-do-rei">O Retorno do Rei</a>
+                                    <a class="dropdown-item" href="#orgulho-e-preconceito">Orgulho e Preconceito</a>
+                                    <a class="dropdown-item" href="#o-morro-dos-ventos-uivantes">O Morro dos Ventos Uivantes</a>
+                                    <a class="dropdown-item" href="#mrs-dalloway">Mrs. Dalloway</a>
+                                    <a class="dropdown-item" href="#duna">Duna</a>
+                                    <a class="dropdown-item" href="#o-guia-do-mochileiro-das-galaxias">O Guia do Mochileiro das Galáxias</a>
+                                    <a class="dropdown-item" href="#o-chamado-de-cthulu">O Chamado de Cthulu</a>
+                                    <a class="dropdown-item" href="#sherlock-holmes">As Aventuras de Sherlock holmes</a>
+                                    <a class="dropdown-item" href="#o-sonho-de-um-homem-ridiculo">O Sonho de Um Homem Ridículo</a>
+                                    <a class="dropdown-item" href="#os-quatro-grandes">Os Quatro Grandes</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled"></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- conteúdo da página -->
+        <div class="container mt-5">
+
+            <!-- título visual da página -->
+            <div class="text-center">
+                    <img src="imgTeste/logo3-teste.png" height="150" width="450" class="img-fluid">
+                </div>
+
+            <!-- div para album de imagens -->
+            <div class="py-5 bg-dark">
+
+                <div class="container">
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="sortable">
+
+                        <!-- primeiro item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="memorias-postumas-de-bras-cubas">
+                                <img class="img-fluid" src="img/Memorias.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Memórias Póstumas de Brás Cubas</p>
+                                    <small class="text-muted">R$ 29,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="1">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="1" data-pedido="0" data-produto="Memórias Póstumas de Brás Cubas" data-valor="29.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- segundo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="dom-casmurro">
+                                <img class="img-fluid" src="img/DomCasmurro.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Dom Casmurro</p>
+                                    <small class="text-muted">R$ 29,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="2">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="2" data-pedido="0" data-produto="Dom Casmurro" data-valor="29.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- terceiro item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="dracula">
+                                <img class="img-fluid" src="img/Dracula.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Drácula</p>
+                                    <small class="text-muted">R$ 19,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="3">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="3" data-pedido="0" data-produto="Dracula" data-valor="19.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- quarto item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id='o-conde-de-monte-cristo'>
+                                <img class="img-fluid" src="img/CondeMonteCristo.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">O Conde de Monte Cristo</p>
+                                    <small class="text-muted">R$ 39,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="4">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="4" data-pedido="0" data-produto="O Conde de Monte Cristo" data-valor="39.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- quinto item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="os-miseraveis">
+                                <img class="img-fluid" src="img/Miseraveis.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Os Miseráveis</p>
+                                    <small class="text-muted">R$ 25,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="5">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="5" data-pedido="0" data-produto="Os Miseráveis" data-valor="25.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sexto item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="a-metamorfose">
+                                <img class="img-fluid" src="img/Metamorfose.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">A Metamorfose</p>
+                                    <small class="text-muted">R$ 14,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="6">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="6" data-pedido="0" data-produto="A Metamorfose" data-valor="14.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sétimo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="1984">
+                                <img class="img-fluid" src="img/1984.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">1984</p>
+                                    <small class="text-muted">R$ 29,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="7">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="7" data-pedido="0" data-produto="1984" data-valor="29.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- oitavo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="frankenstein">
+                                <img class="img-fluid" src="img/Frankenstein.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Frankenstein</p>
+                                    <small class="text-muted">R$ 14,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="8">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="8" data-pedido="0" data-produto="Frankenstein" data-valor="14.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- nono item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="a-revolucao-dos-bichos">
+                                <img class="img-fluid" src="img/Revolucao.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">A Revolução dos Bichos</p>
+                                    <small class="text-muted">R$ 14,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="9">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="9" data-pedido="0" data-produto="A Revolução dos Bichos" data-valor="14.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="a-sociedade-do-anel">
+                                <img class="img-fluid" src="img/SociedadeAnel.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">A Sociedade Do Anel</p>
+                                    <small class="text-muted">R$ 29,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="10">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="10" data-pedido="0" data-produto="A Sociedade do Anel" data-valor="29.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo primeiro item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="as-duas-torres">
+                                <img class="img-fluid" src="img/DuasTorres.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">As Duas Torres</p>
+                                    <small class="text-muted">R$ 29,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="11">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="11" data-pedido="0" data-produto="As Duas Torres" data-valor="29.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo segundo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="o-retorno-do-rei">
+                                <img class="img-fluid" src="img/RetornoRei.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">O Retorno do Rei</p>
+                                    <small class="text-muted">R$ 29,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="12">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="12" data-pedido="0" data-produto="O Retorno do Rei" data-valor="29.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo terceiro item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="orgulho-e-preconceito">
+                                <img class="img-fluid" src="img/OrgulhoPreconceito.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Orgulho e Preconceito</p>
+                                    <small class="text-muted">R$ 15,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="13">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="13" data-pedido="0" data-produto="Orgulho e Preconceito" data-valor="15.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo quarto item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="o-morro-dos-ventos-uivantes">
+                                <img class="img-fluid" src="img/VentosUivantes.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">O Morro dos Ventos Uivantes</p>
+                                    <small class="text-muted">R$ 14,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="14">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="14" data-pedido="0" data-produto="O Morro dos Ventos Uivantes" data-valor="14.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo quinto item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="mrs-dalloway">
+                                <img class="img-fluid" src="img/Dalloway.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Mrs. Dalloway</p>
+                                    <small class="text-muted">R$ 17,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="15">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="15" data-pedido="0" data-produto="Mrs. Dalloway" data-valor="17.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo sexto item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="duna">
+                                <img class="img-fluid" src="img/Duna.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Duna</p>
+                                    <small class="text-muted">R$ 49,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="16">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="16" data-pedido="0" data-produto="Duna" data-valor="49.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo sétimo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="o-guia-do-mochileiro-das-galaxias">
+                                <img class="img-fluid" src="img/Mochileiro.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">O Guia Definitivo do Mochileiro das Galáxias</p>
+                                    <small class="text-muted">R$ 59,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="17">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="17" data-pedido="0" data-produto="O Guia Definitivo do Mochileiro das Galáxias" data-valor="59.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo oitavo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="o-chamado-de-cthulu">
+                                <img class="img-fluid" src="img/Lovecraft.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">O Chamado de Cthulu</p>
+                                    <small class="text-muted">R$ 12,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="18">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="18" data-pedido="0" data-produto="O Chamado de Cthulu" data-valor="12.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- décimo nono item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="sherlock-holmes">
+                                <img class="img-fluid" src="img/Sherlock.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">As Aventuras de Sherlock Holmes</p>
+                                    <small class="text-muted">R$ 19,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="19">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="19" data-pedido="0" data-produto="As Aventuras de Sherlock Holmes" data-valor="19.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- vigésimo item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="o-sonho-de-um-homem-ridiculo">
+                                <img class="img-fluid" src="img/OSonho.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">O Sonho de Um Homem Ridículo</p>
+                                    <small class="text-muted">R$ 22,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="20">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="20" data-pedido="0" data-produto="O Sonho de Um Homem Ridículo" data-valor="22.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- vigésimo primeiro item -->
+                        <div class="col">
+                            <div class="card shadow-sm" id="os-quatro-grandes">
+                                <img class="img-fluid" src="img/QuatroGrandes.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Os Quatro Grandes</p>
+                                    <small class="text-muted">R$ 14,90</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <input type="number" class="form-control form-control-sm quantidade" value="1" min="1" data-codigo-quantidade="21">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-incluir-remover" data-codigo="21" data-pedido="0" data-produto="Os Quatro Grandes" data-valor="14.90">Incluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-4 text-center">
+                    <button type="button" class="btn btn-lg btn-outline-success btn-enviar-pedido">Enviar pedido</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-pedido" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Enviar pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-pedido-msg">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="btn-confirmar-pedido">Enviar pedido pelo Whatsapp</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <footer class="ps-4 pt-4">
+                <p>Grupo: Nathan, Adla, Fernanda, Hudson e Alan</p>
+                <p>Whatsapp: +55 32 98446-2817</p>
+                <p>Email: livrariabooksintegration@gmail.com</p>
+                <a class="navbar-brand" href="https://www.instagram.com/livrariabooksintegration/"><img src="imgTeste/logo-instagram.png" height="50" width="50"></a>
+                <a class="navbar-brand" href="https://www.facebook.com/Books-Integration-110815191427238"><img src="imgTeste/logo-facebook.png" height="50" width="50"></a>
+                <a class="navbar-brand" href="https://twitter.com/booksinte"><img src="imgTeste/logo-twitter.png" height="50" width="50"></a>
+                <div class="text-center">
+                    <img src="imgTeste/logo3.png" height="250" width="250">
+                </div>
+                <p>Books Integration 2021 ®</p>
+                    
+                   
+            </footer>
+        </div>
+    </nav>
+
+</body>
+</html>
